@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Introduction</title>
+    <style>
+        .change_css h2 {
+            font-size: 20px;
+        }
+        #show {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Change HTML Content -->
+        <div class="change_html_content">
+            <h2>JavaScript can change HTML content.</h2>
+            <div id="demo">JavaScript can change HTML content.</div>
+        </div>
+
+        <!-- Change HTML Attributes -->
+        <h2>Change Attributes</h2>
+        <div class="change_attributes">
+            <button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button>
+            <img id="myImage" src="images/pic_bulboff.gif" alt="Images Not Found!">
+            <button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
+        </div>
+
+        <!-- Change HTML Styles (CSS) -->
+        <div class="change_css">
+            <h2 id="font-change">JavaScript can change the style of an HTML element.</h2>
+        </div>   
+
+        <!-- Show HTML Elements -->
+        <div class="show_element">
+            <h3 id="show">JavaScript Can Show HTML Elements</h3>
+            <button onclick="document.getElementById('show').style.display = 'block'">Click Me</button>
+        </div>
+        <!-- Show HTML Elements -->
+        <div class="hide_element">
+            <h3 id="hide">JavaScript Can Hide HTML Elements</h3>
+            <button onclick="document.getElementById('hide').style.display = 'none'">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('container').style.width = '1200px';
+        document.getElementById('container').style.margin = '0 auto';
+        document.getElementById('demo').innerHTML = "Hello JavaScript";
+        document.getElementById('font-change').style.fontSize = '36px';
+        document.getElementById('font-change').style.textTransform = 'uppercase';
+        document.getElementById('font-change').style.backgroundColor = '#1dd1a1';
+        document.getElementById('font-change').style.color = '#FFF';
+        document.getElementById('font-change').style.padding = '15px';
+    </script>
+</body>
+</html>
