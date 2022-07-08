@@ -31,4 +31,3 @@ function writeF(){
 let value = document.getElementById('demo2');
 console.log(value);
 
-
