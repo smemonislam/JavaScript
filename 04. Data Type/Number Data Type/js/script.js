@@ -22,3 +22,6 @@ document.getElementById("sub").innerHTML = subtract;
 document.getElementById("mul").innerHTML = multiply;
 document.getElementById("div").innerHTML = divide;
 
+
+
+
