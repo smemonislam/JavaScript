@@ -184,5 +184,299 @@ console.log( text.split( " " ) );
 
 text = "a,b,c,d,e,f";
 console.log( text.split( "," ) );
-
+text = "a|b|c";
 console.log( text.split( "|" ) );
+
+//JavaScript Search Methods
+
+let str = "Please locate where 'locate' occurs!";
+
+console.log( str.indexOf( "locate" ) );  
+console.log( str.lastIndexOf( "locate" ) );
+console.log( str.search( "locate" ) );
+
+let text7 = "Hello world, welcome to the universe.";
+console.log( text7.includes( "universe" ) );
+
+/**
+ * Boolean
+ */
+
+// Boolean represents one of two values
+/**
+ * yes/no
+ * true/false
+ * on/off
+ * 1/0
+ */
+
+console.log( Boolean( 10 > 9 ) );
+console.log( Boolean( 0 ) );
+console.log( Boolean( -0 ) );
+console.log( Boolean( "" ) );
+console.log( Boolean( undefined ) );
+console.log( Boolean( null ) );
+console.log( Boolean( false ) );
+console.log( Boolean( 10 / "Hallo" ) );
+
+
+/**
+ * Null
+ */
+
+// Faka Ekti Value/ Kichu Na/ Emon Ekti value jeta amr jana nei.
+let value = null;
+
+/**
+ * undefined
+ */
+
+let value2;
+
+/**
+ * Rerecence Data Type
+ *      i. Array
+ *      ii. Object
+ *      iii. Function
+ */
+
+/**
+ * Array
+ */
+
+// Array Declaration
+let arr1 = [ "Emon", "Keya", "Mezar", "Nusaiba" ];
+let arr2 = new Array( "Emon", "Keya", "Mezar", "Nusaiba" );
+
+console.log( typeof arr1 );
+
+// Accecessing in array element
+console.log( arr1[0] );
+console.log( arr1[1] );
+console.log( arr1[2] );
+console.log( arr1[3] );
+
+// Accessing the First Array Element
+console.log(  arr1[0] );
+
+// Accessing the Last Array Element
+console.log( arr1[arr1.length - 1] );
+
+// Looping Array Elements
+for( let i = 0; i < arr1.length; i++ ){
+    console.log( arr1[i] );
+}
+
+/**
+ * The Difference Between Arrays and Objects
+ * In JavaScript, arrays use numbered indexes. 
+ * In JavaScript, objects use named indexes.
+ */
+
+// JavaScript Array Methods
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log( fruits.length );
+
+// Insert Element in array.
+//************************//
+
+// fruits[0] = "Lemon";
+// fruits.unshift( "Lemon" );
+// fruits.splice( 1, 0, "Lemon" );
+// console.log( fruits );
+
+// fruits[fruits.length] = "Lemon";
+// fruits[fruits.length-1] = "Lemon";
+// fruits.push( "Lemon" );
+// fruits.splice( 3, 0, "Lemon" );
+// console.log( fruits );
+
+// Delete Element in array
+// *********************//
+
+// fruits['0'] = null;
+// fruits[0] = undefined;
+// fruits.shift();
+// fruits.splice( 0, 1 );
+// delete fruits[0];
+
+// fruits[fruits.length - 1] = null;
+// fruits[fruits.length - 1] = undefined;
+// fruits[fruits.length - 1] = "";
+// fruits.pop();
+// console.log( fruits );
+
+// const myGirls = ["Cecilie", "Lone"];
+// const myBoys = ["Emil", "Tobias", "Linus"];
+
+// console.log( myGirls.concat( myBoys ) );
+
+/**
+ * JavaScript Sorting Arrays
+ */ 
+
+// fruits.sort();
+
+// console.log( fruits );
+// fruits.reverse();
+// console.log( fruits );
+
+const points = [40, 100, 1, 5, 25, 10];
+// points.sort( function( a, b ){
+//     return a - b;
+// } );
+// console.log( points );
+
+// points.sort( function( a, b ){
+//     return b - a;
+// } );
+// console.log( points );
+
+// console.log( Math.max.apply( null, points ) );
+// console.log( Math.min.apply( null, points ) );
+
+// points.forEach( function( value, index, array ){
+//     console.log( value )
+// } );
+
+// const resultValue = points.map( function( value, index, array ){
+//     return value * value;
+// } );
+// console.log( resultValue );
+
+// const resultValue = points.filter( function( value ){
+//     return value > 9;
+// } );
+// console.log( resultValue );
+
+// const resultValue = points.reduce( function( prev, curr ){
+//     return prev + curr;
+// } );
+// console.log( resultValue );
+
+// const resultValue = points.every( function( value ){
+//     return value > 16;
+// } );
+
+// console.log( resultValue );
+
+// const resultValue = points.some( function( value ){
+//     return value > 16;
+// } );
+// console.log( resultValue );
+
+// const resultValue = points.indexOf( 40 ) + 1;
+// console.log( resultValue );
+
+// const fruitsName = ["Apple", "Orange", "Apple", "Mango"];
+// console.log( fruitsName.lastIndexOf( "Apple" ) + 1 );
+
+
+// const numbers = [4, 9, 16, 25, 29];
+// const resultValue = numbers.find( function( value ){
+//     return value > 9;
+// } )
+// console.log( resultValue );
+
+// const resultValue = numbers.findIndex( function( value ){
+//     return value > 16;
+// });
+// console.log( resultValue )
+
+// const stringValue = "ABCDEF";
+// const resultValue = Array.from(stringValue);
+// console.log( resultValue );
+
+
+/**
+ * Object
+ */
+
+const person = {
+    fName: "Emon",
+    lName: "Islam",
+    age: 26,
+    fullName: function(){
+        return this.fName + " " + this.lName;
+    }
+}
+
+/**
+ * Accessing the object properites
+ * objectName.key_name
+ * objectName['key_name']
+ * 
+ * Accessing the object mehtods
+ * 
+ * objectName.keyName()
+ */
+console.log( person.fName ); // objectName.key_name
+console.log( person['lName'] ); // objectName['key_name']
+console.log( person.fullName() ); // objectName.key_name()
+
+
+/**
+ * Function
+ */
+
+
+
+
+/**
+ * Probelm Solving
+ */
+
+// কি ভাবে আমরা শ্রেনিকক্ষের সকলের নাম Alphabeticlay সাজাতে পারি?
+
+const className = [ "Hafizur Rahman", "Al Mamun", "Emon Islam", "Jahid Hasan" ];
+console.log( className.sort() );
+
+// কিভাবে আমরা শ্রেনিকক্ষের রোল নাম্বর ক্রম হিসাবে সাজাতে পারি?
+
+const rollNumber = [ 10, 2, 15, 9, 1, 7, 14, 3, 12, 5, 11, 4, 8, 13 , 6];
+console.log( rollNumber.sort( function( a, b ){
+    return a - b;
+} ) );
+
+// কোন সাল Leap Year না তা কিভাবে বের করতে পারি?
+
+function isLeapYear( year ){
+    let leapYear;
+    if( ( year % 400 === 0 ) || ( year % 4 === 0 && year % 100 !== 0 ) ){
+        leapYear = "Is Leap Year";
+    }else{
+        leapYear = "Is Not Leap Year";
+    }
+    return leapYear;
+}
+console.log( isLeapYear( 2032 ) );
+
+// কোন sentence এ কতগুলো vowel আছে তা নির্ণয় করবো কিভাবে?
+
+const vowels = [ 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' ]
+
+function isSentece( sentence ){
+    let count = 0;
+    let letters = Array.from( sentence );
+    letters.forEach( function( value  ){
+        if( vowels.includes( value ) ){
+            count++;
+        }
+    } );
+    return count;
+}
+console.log( isSentece( "I Love Bangladesh" ) );
+
+// কোন Array থেকে Duplicate নম্বর বের করতে পারি কিভাবে?
+const arrNumber = [ 1, 4, 5, 5, 6, 7, 4, 9, 10, 11 ];
+
+const duplicateNumber = arrNumber.filter( function( value, index, array ){
+    return array.indexOf( value ) !== index;
+} )
+
+// কোন Array থেকে unique নম্বর বের করতে পারি কিভাবে?
+const uniqueNumber = arrNumber.filter( function( value, index, array ){
+    return array.indexOf( value ) === index;
+} )
+console.log( uniqueNumber )
