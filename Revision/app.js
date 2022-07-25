@@ -419,9 +419,112 @@ console.log( person.fullName() ); // objectName.key_name()
 /**
  * Function
  */
+// Function Declarations
+// function funcName( parameters ){
+//    // code to be executed   
+// }
 
+// function add( num1, num2 ){
+//     console.log( num1 + num2 ); // 30
+// }
+// const anotherAdd = add( 10, 20 ); // anotherAdd = undefined
 
+// function sleep(){
+//     return "I am sleeping in 11.00 AM Regular";
+// }
+// const anotherSleep = sleep(); // anthoerSleep = "I am sleeping in 11.00 AM Regular";
 
+// // Function Expressions
+// const functionExpression = function( parameters ){
+//     // code to be executed   
+// };
+
+// // Self-Invoking Functions
+// (function( parameters ){ //IIFE
+//     // code to be executed  
+// })()
+
+// // Arrow Functions
+// const arrow = () => {
+//     // code to be executed 
+// }
+
+const number = [1, 123, 500, 115, 44, 88];
+function findMax( arr ){
+    let max = arr[0];
+    for( let i = 0; i < arr.length; i++ ){
+        // 1 > 1 false  max = 1
+        // 123 > 1 true max = 1
+        // 500 > 123 true max = 123
+        // 115 > 500 false max = 500
+        // 44 > 500 false max = 500
+        // 88 > 500 false max = 500
+
+        if( arr[i] > max ){
+            max = arr[i] 
+        }
+    }
+    return max;
+}
+console.log( findMax( number ) )
+
+const number23 = [2, 1, 123, 500, 115, 44, 88];
+function findMin( arr ){
+    let min = arr[0];
+    for( let i = 0; i < arr.length; i++ ){
+        // 2 < 2 false min = 2
+        // 1 < 2 true min = 1
+        // 123 < 1 false min = 1
+        // 500 < 1 false min =1
+        if( arr[i] < min ){
+            min = arr[i];
+        }
+    }
+    return min;
+}
+console.log( findMin( number23 ) );
+
+function helloThis(){
+    console.log( this );
+    function innerThis(){
+        console.log( this )
+    }
+    innerThis()
+}
+helloThis()
+
+const obj = {
+    name: "Emon",
+    age: 26,
+    helloThis: function(){
+        console.log(this);
+        function innerThis(){
+            console.log( this );
+        }
+        innerThis();
+        (()=>{
+            console.log(this)
+        })();
+    }
+}
+obj.helloThis();
+
+// let counter = 0;
+// function count(){
+//     let counter = 0;
+//     return counter += 1;
+// }
+// console.log( count() );
+// console.log( count() );
+// console.log( count() );
+// console.log( counter )
+
+function temporay(){
+    let counter = 0;
+    return () => counter++;
+}
+const count = temporay();
+count(); 
 
 /**
  * Probelm Solving
